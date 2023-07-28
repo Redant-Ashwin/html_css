@@ -1,0 +1,52 @@
+body{
+    margin-top: 40px;
+}
+body::before{
+    content: "xs";
+    color: cornflowerblue;
+    font-size: 2rem;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+}
+.box{
+    background-color: rgb(28, 185, 212);
+    border: 1px solid blue;
+    height: 30px;
+}
+#india{
+    text-align: center;
+    font-size: 50px;
+    color: gold;
+}
+#tamil{
+    font-size: 2rem;
+    text-align: center;
+    color: chartreuse;
+
+}
+    @media (min-width: 576px) {
+        body::before{
+            content: "SM";
+        }    
+    }
+    @media (min-width: 768px) {
+        body::before{
+            content: "Medium";
+        }    
+    }
+    @media (min-width: 992px) {
+        body::before{
+            content: "Large";
+        }    
+    }
+    @media (min-width: 1200px) {
+        body::before{
+            content: "extra large";
+        }    
+    }
+    @media (min-width: 1400px) {
+        body::before{
+            content: "extra extra large"
+        }    
+    }
