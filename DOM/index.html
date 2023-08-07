@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        function hi() {
+            console.log("onchange")
+        }
+        function hi1() {
+            console.log("onfocus")
+        }
+        function hi2() {
+            console.log("onblur")
+        }
+        function hi3() {
+            console.log("key press");
+        }
+        function hi4() {
+            console.log("on double click");
+        }
+        function hi5() {
+            console.log("mouse enter");
+        }
+        function hi6() {
+            console.log("mouse leave");
+        }
+        function hi7() {
+            console.log("mouse move");
+        }
+        function hi8(event) {
+            event.preventDefault()
+            alert("onsubmit");
+        }
+        function hi9() {
+            alert("reset");
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="dom">
+        <form action=""  onsubmit="hi8(event)"  onreset="hi9()">
+            <label for="name">name</label>
+            <input type="text" id="name" onchange="hi()"><br><br>
+
+            <label for="mail">email</label>
+            <input type="email" id="mail" onfocus="hi1()"><br><br>
+
+            <label for="phone">phonenumber</label>
+            <input type="number" id="phone" onblur="hi2()"><br><br>
+
+            <label for="address">address</label>
+            <input type="textbox" id="address" onkeypress="hi3()"><br><br>
+
+            <label for="college">college name</label>
+            <input type="text" id="college" ondblclick="hi4()"><br><br>
+
+            <label for="state">state</label>
+            <input type="state" id="state" onmouseenter="hi5()"><br><br>
+
+            <label for="city">city</label>
+            <input type="text" id="city" onmouseleave="hi6()"><br><br>
+
+            <label for="location">college location</label>
+            <input type="text" id="location" onmousemove="hi7()"><br><br>
+
+            <label for="submit"></label>
+            <input type="submit" id="submit"><br><br>
+
+            <label for="reset"></label>
+            <input type="reset" id="reset"><br><br>
+        </form>
+    </div>
+</body>
+
+</html>
