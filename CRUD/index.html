@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+error
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="crud">
+        <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fa-solid fa-plus">ADD</i>
+        </button>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Details</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="inputform" autocomplete="off">
+                            <div class="form-group row">
+                                <label for="name" class=" col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="hidden" id="hid" value=""/>
+                                    <input type="text" class="form-control " id="name" placeholder="Name">
+                                    <small style="color:red" class="error error-name"></small>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <small style="color:red" class="error error-mail"></small>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="date" class="col-form-label">PHONE</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="phone" placeholder="NUMBER">
+                                    <small style="color:red" class="error error-phone"></small>
+                                </div>
+                            </div><br>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-check form-switch form-check-reverse" style="float: left;">
+                                            <input class="form-check-input" type="checkbox" id="switch">
+                                            <label class="form-check-label" for="flexSwitchCheckReverse">Status</label>
+                                            <small style="color:red" class="error error-state"></small>
+                                        </div>
+                                    </div>
+                            </fieldset>
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
